@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "spring.ai.vectorstore.chroma.initialize-schema",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.ai.vectorstore.chroma.initialize-schema'"
+  },
+  {
+    "name": "spring.ai.vectorstore.chroma.url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.ai.vectorstore.chroma.url'"
+  },
+  {
+    "name": "spring.ai.vectorstore.chroma.host",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.ai.vectorstore.chroma.host'"
+  },
+  {
+    "name": "spring.ai.vectorstore.chroma.collection-name",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.ai.vectorstore.chroma.collection-name'"
+  }
+]}
