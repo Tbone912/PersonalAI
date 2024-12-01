@@ -1,0 +1,56 @@
+cmd
+wsl.exe
+
+sudo dockerd   - starts docker daemon manually
+
+docker run -d --name chromadb \
+    -p 8000:8000 \
+    -v ./chroma_data:/chroma/chroma \
+    -e IS_PERSISTENT=TRUE \
+    chromadb/chroma:latest
+
+
+CLick on docker.yaml
+WSL: docker compose -up
+
+Start program
+
+a4f69fcbe1b8
+
+See containers
+	docker ps 
+
+Get into container
+	docker exec -it a4f69fcbe1b8  /bin/bash
+
+Open python
+
+
+Check for collection
+	import chromadb
+	client = chromadb.Client()
+	**collections = client.list_collections()**
+	print([col.name for col in collections])
+
+Make Collection
+	import chromadb
+						from chromadb.utils import embedding_functions
+						emb_fn = embedding_functions.DefaultEmbeddingFunction()
+	client = chromadb.Client()
+	collection = client.create_collection(name="AI1")		, embedding_function=emb_fn)
+
+collections.peek()
+
+https://docs.trychroma.com/guides
+
+collection = client.get_or_create_collection("SpringAiCollection")
+results = collection.get()
+print(f"Documents: {results['documents']}")
+
+collection = client.get_or_create_collection("SpringAiCollection")
+results = collection.get()
+all_ids = results['ids']
+collection.delete(ids=all_ids)
+
+
+
